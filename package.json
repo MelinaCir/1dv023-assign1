@@ -25,5 +25,12 @@
   },
   "eslintConfig": {
     "extends": "@lnu"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "fs-extra": "^8.1.0",
+    "jsdom": "^16.1.0",
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.0"
   }
 }
