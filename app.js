@@ -8,7 +8,7 @@
 
 const { getLinks } = require('./lib/scraper')
 const { getAvailableDate } = require('./lib/calendarScraper')
-// const { getAvailableMovie } = require('./lib/cinemaScraper')
+const { getAvailableMovie } = require('./lib/cinemaScraper')
 // const { getAvailableDinner } = require('./lib/dinnerScraper')
 
 const args = process.argv.slice(2)
@@ -29,6 +29,8 @@ if (args.length === 0) {
     console.log('Scraping links...OK')
 
     const date = getAvailableDate(linkArray[0])
+
+    getAvailableMovie(linkArray[1])
 
     // console.log('Recommendations')
     // console.log('===============')
