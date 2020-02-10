@@ -28,10 +28,9 @@ if (args.length === 0) {
 
     console.log('Scraping links...OK')
 
-    const date = getAvailableDate(linkArray[0])
-    console.log(date)
+    const days = await getAvailableDate(linkArray[0])
 
-    getAvailableMovie(linkArray[1])
+    getAvailableMovie(linkArray[1], days)
 
     // console.log('Recommendations')
     // console.log('===============')
