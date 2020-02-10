@@ -29,13 +29,13 @@ if (args.length === 0) {
     console.log('Scraping links...OK')
 
     const date = getAvailableDate(linkArray[0])
+    console.log(date)
 
     getAvailableMovie(linkArray[1])
 
     // console.log('Recommendations')
     // console.log('===============')
-    // console.log('* On ', day,' the movie "', movie,'" starts at ', movieTime,
-    // ' and there is a free table between ', dinnerTime, '.')
+    // console.log('* On ', date, ' the movie "', movie, '" starts at ', movieTime, ' and there is a free table between ', dinnerTime, '.')
   } catch (error) {
     console.log('Error: ', error)
   }
