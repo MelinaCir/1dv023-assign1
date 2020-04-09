@@ -34,9 +34,13 @@ if (args.length === 0) {
 
     getAvailableDinner(linkArray[2], movies)
 
+    if (days.length < 1) {
+      console.log('No day available for everyone involved!')
+    } else {
     // console.log('Recommendations')
     // console.log('===============')
     // console.log('* On ', date, ' the movie "', movie, '" starts at ', movieTime, ' and there is a free table between ', dinnerTime, '.')
+    }
   } catch (error) {
     console.log('Error: ', error)
   }
