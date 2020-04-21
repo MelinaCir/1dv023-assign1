@@ -32,14 +32,18 @@ if (args.length === 0) {
 
     const movies = await getAvailableMovie(linkArray[1], days)
 
-    getAvailableDinner(linkArray[2], movies)
+    const dinner = await getAvailableDinner(linkArray[2], movies)
+
+    console.log('\n\nRecommendations')
+    console.log('===============')
 
     if (days.length < 1) {
       console.log('No day available for everyone involved!')
     } else {
-    // console.log('Recommendations')
-    // console.log('===============')
-    // console.log('* On ', date, ' the movie "', movie, '" starts at ', movieTime, ' and there is a free table between ', dinnerTime, '.')
+      dinner.forEach(result => {
+        console.log('* On ' + result.day + ' the movie "' + result.movie + '" starts at ' + result.time +
+         ' and there is a free table between ' + result.dinnerStart + ':00-' + result.dinnerEnd + ':00.')
+      })
     }
   } catch (error) {
     console.log('Error: ', error)
